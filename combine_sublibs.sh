@@ -29,8 +29,8 @@ fi
 # Submit the job with SBATCH options specified directly
 sbatch \
   --job-name="$JOB_NAME" \
-  --output="%x.%j.out" \
-  --error="%x.%j.err" \
+  --output="${COMBINED_OUTPUT_DIR}/%x.%j.out"
+  --error="${COMBINED_OUTPUT_DIR}/%x.%j.err"
   --time="$TIME" \
   --mem="$MEMORY" \
   --cpus-per-task="$CPUS" \
